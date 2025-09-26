@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Produse Afiliate</title>
+</head>
+<body>
+  <h1>Produse Amazon</h1>
+  <div id="produse"></div>
+
+  <script>
+    fetch('produse.json')
+      .then(r => r.json())
+      .then(data => {
+        let html = '';
+        data.forEach(p => {
+          html += `
+            <div>
+              <h3>p.titlu</h3>
+              <img src="{p.imagine}" width="200"><br>
+              <p>p.descriere</p>
+              <p><strong>Preț:</strong>{p.pret}</p>
+              <a href="${p.link}" target="_blank">
+                <button style="background:#003366;color:white;padding:10px;">BUY</button>
+              </a>
+              <hr>
+            </div>
+          `;
+        });
+        document.getElementById('produse').innerHTML = html;
+      );
+  </script>
+</body>
+</html>
