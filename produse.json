@@ -1,10 +1,24 @@
 
 [
-  
-    "titlu": "Mouse Wireless Logitech",
-    "descriere": "Mouse ergonomic cu baterie durabilă.",
-    "imagine": "https://link-la-poza.jpg",
-    "pret": "19.99",
-    "link": "https://amzn.to/12345"
+  {
+    "titlu": "Wireless Earbuds Bluetooth 5.3",
+    "descriere": "Noise Cancelling, Long Battery Life, Touch Control, Waterproof",
+    "poza": "https://m.media-amazon.com/images/I/61NwZ2qJ6hL._AC_SL1500_.jpg",
+    "pret": "29.99 EUR",
+    "link": "https://amzn.to/46ngYAP"
+  },
+  {
+    "titlu": "Portable Charger 20000mAh",
+    "descriere": "High-Speed Power Bank with LCD Display",
+    "poza": "https://m.media-amazon.com/images/I/71q6jv3sm9L._AC_SL1500_.jpg",
+    "pret": "39.95 EUR",
+    "link": "https://amzn.to/46xsudb"
+  },
+  {
+    "titlu": "Smartwatch Fitness Tracker",
+    "descriere": "Heart Rate Monitor, Sleep Tracking, Waterproof, iOS/Android Compatible",
+    "poza": "https://m.media-amazon.com/images/I/61ZfF-NRVsL._AC_SL1500_.jpg",
+    "pret": "59.90 EUR",
+    "link": "https://amzn.to/47X9lCt"
   }
 ]
