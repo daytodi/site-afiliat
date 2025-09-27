@@ -4,22 +4,29 @@
   <meta charset="UTF-8">
   <title>Produse Amazon</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    .produs { border: 1px solid #ccc; padding: 10px; margin-bottom: 20px; max-width: 400px; }
-    .produs img { width: 100%; height: auto; }
+    .produs {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 15px;
+      max-width: 300px;
+    }
+    .produs img {
+      max-width: 100%;
+      height: auto;
+    }
     .btn-buy {
       display: inline-block;
-      background-color: #003366;
-      color: white;
+      margin-top: 10px;
       padding: 10px 15px;
+      background-color: #003366;
+      color: #fff;
       text-decoration: none;
       border-radius: 5px;
     }
   </style>
 </head>
 <body>
-
-  <h1>Produse recomandate Amazon</h1>
+  <h1>Produse Amazon</h1>
   <div id="lista-produse"></div>
 
   <script>
@@ -36,10 +43,10 @@
             <p>{p.descriere}</p>
             <p><strong>p.pret</strong></p>
             <a class="btn-buy" href="{p.link}" target="_blank">BUY</a>
+          `;
           container.appendChild(div);
         });
       });
-  </script>
-
+    </script>
 </body>
 </html>
