@@ -4,48 +4,52 @@
   <meta charset="UTF-8">
   <title>Produse Amazon</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
     .produs {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin: 15px;
-      max-width: 300px;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
     }
     .produs img {
-      max-width: 100%;
-      height: auto;
+      max-width: 200px;
+      display: block;
+      margin-bottom: 10px;
     }
     .btn-buy {
       display: inline-block;
-      margin-top: 10px;
       padding: 10px 15px;
       background-color: #003366;
-      color: #fff;
+      color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
   <h1>Produse Amazon</h1>
   <div id="lista-produse"></div>
-<script>
-  fetch('produse.json')
-    .then(r => r.json())
-    .then(data => 
-      const container = document.getElementById('lista-produse');
-      data.forEach(p => 
-        const div = document.createElement('div');
-        div.className = 'produs';
-        div.innerHTML = `
-          <img src="{p.poza}" alt="p.titlu">
-          <h2>{p.titlu}</h2>
-          <p>p.descriere</p>
-          <p><strong>{p.pret}</strong></p>
-          <a class="btn-buy" href="${p.link}" target="_blank">BUY</a>
-        ;
-        container.appendChild(div);
+  <script>
+    fetch('produse.json')
+      .then(r => r.json())
+      .then(data => {
+        const container = document.getElementById('lista-produse');
+        data.forEach(p => {
+          const div = document.createElement('div');
+          div.className = 'produs';
+          div.innerHTML = `
+            <img src="p.poza" alt="{p.titlu}">
+            <h2>p.titlu</h2>
+            <p>{p.descriere}</p>
+            <p><strong>${p.pret}</strong></p>
+<a class="btn-buy" href="{p.link}" target="_blank">BUY</a>
+          `;
+          container.appendChild(div);
+        });
       });
-    });
-</script>
+  </script>
 </body>
 </html>
