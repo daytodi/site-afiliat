@@ -2,41 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Amazon Deals</title>
+  <title>Produse Amazon</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      padding: 20px;
-    }
-    .produs {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 15px;
-      margin-bottom: 20px;
-      max-width: 600px;
-    }
-    .produs img {
-      max-width: 100%;
-      border-radius: 4px;
-    }
-    .produs h2 {
-      margin: 10px 0 5px;
-    }
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .produs { border: 1px solid #ccc; padding: 10px; margin-bottom: 20px; max-width: 400px; }
+    .produs img { width: 100%; height: auto; }
     .btn-buy {
-      background-color: #004080;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 4px;
       display: inline-block;
-      margin-top: 10px;
+      background-color: #003366;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
-  <h1>Produse Amazon</h1>
+
+  <h1>Produse recomandate Amazon</h1>
   <div id="lista-produse"></div>
 
   <script>
@@ -53,10 +36,10 @@
             <p>{p.descriere}</p>
             <p><strong>p.pret</strong></p>
             <a class="btn-buy" href="{p.link}" target="_blank">BUY</a>
-          `;
           container.appendChild(div);
         });
       });
   </script>
+
 </body>
 </html>
